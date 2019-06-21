@@ -28,23 +28,37 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain the differences between `client-side routing` and `server-side routing`.
-- [ ] What does HTTP stand for?
-- [ ] What does CRUD stand for?
-- [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
-- [ ] Mention three tools we can use to make AJAX requests.
+- [X] Explain the differences between `client-side routing` and `server-side routing`.
+
+In client-side routing, the route is handled internally by JS loaded on the page. To do this, the entire site/app is loaded during the initial request and then changed states result in different views (request to server is prevented). (+ routing between views is faster, smooth transitions are implemented easier, - longer initial load time, some data may not come through, and SEO isn't as great.) In server-side routing, various links request a whole new page from the server. (+ you only get requested data and search engines are optimized for this, - each request is a full refresh, longer time between pages.)
+
+- [X] What does HTTP stand for?
+
+HyperText Transfer Protocol -- defines how messages are formatted, transmitted, and responses that servers and browsers should take for various commands. (Transmitted in plain text and is not secure.) HTTPS is more secure as it uses SSL and TLS for information to be sent in a safe tunnel.
+
+- [X] What does CRUD stand for?
+
+CRUD stands for create (post), read, update (put), and delete. (Refers to all of the functions implemented when a database is involved.) Create: Using a command to access data. Read: Retrieve data and read details. Update: Changing details. Delete: Deleting details.
+
+- [X] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+Get: retrieve information, don't change the state of resources. Post: create new subordinate resources. Put: updates existing resources. Delete: deletes resources. Patch: partial updates to resource.
+
+- [X] Mention three tools we can use to make AJAX requests.
+
+Fetch, .then, .catch.
 
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add PM as collaborator on Github.
+- [X] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [X] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [X] Implement the project on this Branch, committing changes regularly.
+- [X] Push commits: git push origin `<firstName-lastName>`.
 - [ ] **RUN** `yarn install or npm install` at the root to retrieve all the dependencies for the node server. You will not need to create any react apps here nor will you need to install any other dependencies. You should have all you need in this repo.
 - [ ] **LOOK** at all the files you've been given for this project. One important file to note is `server.js`. This file contains an **API** that you are going to be interfacing with. Below is documentation on how to interact with the **API**.
 - [ ] **RUN** `yarn start or npm start` to get your API up and running on `http://localhost:3333`. This is the **URL** you're going to need to use within your React app in order to make AJAX requests for data.
