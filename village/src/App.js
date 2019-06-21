@@ -34,11 +34,6 @@ class App extends Component {
       .catch(error => console.log(error));
     }
 
-  handleInputChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  };
 
   render() {
     return (
@@ -50,13 +45,13 @@ class App extends Component {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/smurfs/add" activeClassName="activeNavButton">
+            <NavLink to="/smurfs" activeClassName="activeNavButton">
               Add Here to Help Us Grow!
             </NavLink>
           </li>
         </ul>
-        <Route exact path="/" render={props => <Smurfs { ...props } smurfs = {this.state.smurfs} />} />
-        <Route path="/smurfs/add" component={SmurfForm} />
+        <Route exact path = "/" render = {props => <Smurfs { ...props } smurfs = {this.state.smurfs} />} />
+        <Route path = "/smurfs" component = { SmurfForm } />
       </div>
     );
   }
